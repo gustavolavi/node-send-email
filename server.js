@@ -7,6 +7,13 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.get('/',function(res,res){
+    res.status(200).json({
+            user: process.env.USEREMAIL,
+            pass: process.env.PASSWORD
+        });
+});
+
 app.post('/',function(req,res){
     const mailOptions = {
         from,

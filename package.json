@@ -4,7 +4,7 @@
   "description": "envio de email",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js"
+    "web": "node server.js"
   },
   "author": "Gustavo Laviola Sanches",
   "license": "ISC",
