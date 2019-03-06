@@ -1,0 +1,17 @@
+{
+  "name": "envia-email",
+  "version": "1.0.0",
+  "description": "envio de email",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "author": "Gustavo Laviola Sanches",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "nodemailer": "^5.1.1",
+    "nodemailer-smtp-transport": "^2.7.4"
+  }
+}
