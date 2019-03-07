@@ -11,7 +11,6 @@ app.use(bodyParser.json());
 
 app.post('/',function(req,res){
     const mailOptions = {
-        from,
         to,
         subject,
         html
