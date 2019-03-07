@@ -3,18 +3,20 @@ const smtpTransport = require('nodemailer-smtp-transport')
 const nodemailer = require('nodemailer')
 
 exports.sendEmail= function(mailOptions){
+
     const transport = nodemailer.createTransport(smtpTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.USEREMAIL,
-            pass: process.env.PASSWORD
+        host : process.env.HOSTEMAIL,
+        port: 25,
+        auth : {
+            user : process.env.USEREMAIL,
+            pass : process.env.PASSWORDEMAIL
         }
-        }))
+    }));
 
     transport.sendMail(mailOptions, function (err, info) {
         if(err)
-            return err
+            console.log(err);
         else
-            return info;     
+            console.log(info);     
     });
 }
